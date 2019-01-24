@@ -10,7 +10,7 @@ export class ProjectsComponent implements OnInit {
     constructor() {
 
     }
-
+    
     projects = [
         {
             title: "Seeker - Design Automation",
