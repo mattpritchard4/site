@@ -30,6 +30,18 @@ export class ProjectsComponent implements OnInit {
         }
     ];
 
+    languages = [
+        "JavaScript", "TypeScript", "Ruby", "Racket", "HTML/CSS", "PHP", "Bash"
+    ];
+
+    tools = [
+        "Emacs", "git", "SASS", "jQuery", "API Integration", "Pug", "Pollen", "CSS Grid", "Bootstrap"
+    ];
+
+    frameworks = [
+        "Angular 6/7", "Webflow", "WordPress", "Braze", "Agility Harmony", "Oracle Responsys", "Sailthru"
+    ];
+
     projects = [
         {
             title: "Seeker - Design Automation",
@@ -49,17 +61,7 @@ export class ProjectsComponent implements OnInit {
         }
     ];
 
-    languages = [
-        "JavaScript", "TypeScript", "Ruby", "Racket", "HTML/CSS", "PHP", "Bash"
-    ];
 
-    tools = [
-        "Emacs", "git", "SASS", "jQuery", "API Integration", "Pug", "Pollen", "CSS Grid", "Bootstrap"
-    ];
-
-    frameworks = [
-        "Angular 6/7", "Webflow", "WordPress", "Braze", "Agility Harmony", "Oracle Responsys", "Sailthru"
-    ]
 
     ngOnInit() {
 

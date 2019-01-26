@@ -19,6 +19,13 @@
 }
 
 @media screen and (max-width: 960px) {
+    .contact .list-column {
+        display: grid;
+        grid-column: span 8 !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .list-column {
         display: grid;
         grid-column: span 8 !important;
