@@ -1,5 +1,37 @@
-<h1>Projects</h1>
+<h1>Resume</h1>
+<hr/>
+<h2>Contact</h2>
+<div class="contact skills-grid">
+    <div [ngClass]="'list-column'" *ngFor="let contact of contacts">
+        <h3>{{ contact.title }}: </h3>
+        <p><a target="_blank" href="{{contact.href}}">{{contact.description}}</a></p>
+    </div>
+</div>
+<hr/>
+<h2>Technical Skills</h2>
+<div class="skills-grid">
+    <div [ngClass]="'list-column'">
+        <h3>Languages</h3>
+        <ul *ngFor="let lang of languages">
+            <li>{{lang}}</li>
+        </ul>
+    </div>
+    <div [ngClass]="'list-column'">
+        <h3>Tools</h3>
+        <ul *ngFor="let tool of tools">
+            <li>{{tool}}</li>
+        </ul>
+    </div>
+    <div [ngClass]="'list-column'">
+        <h3>Frameworks/CMS/ESP</h3>
+        <ul *ngFor="let frame of frameworks">
+            <li>{{frame}}</li>
+        </ul>
+    </div>
+</div>
+<hr/>
+<h2>Projects</h2>
 <div *ngFor="let proj of projects">
-    <h2>{{ proj.title }}</h2>
+    <h3>{{ proj.title }}</h3>
     <p>{{proj.description}}</p>
 </div>

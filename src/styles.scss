@@ -53,6 +53,12 @@ body {
         font-family: 'Oswald';
         letter-spacing: 1px;
     }
+    a {
+        color: #000000;
+        &:hover {
+            font-weight: bold;
+        }
+    }
 }
 
 #container {
@@ -113,7 +119,7 @@ body {
 
 @media screen and (max-width: 960px) {
     body {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     #outlet-container {
         display: grid;

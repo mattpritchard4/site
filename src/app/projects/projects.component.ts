@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Section } from './section';
 @Component({
     selector: 'app-projects',
     templateUrl: './projects.component.html',
@@ -10,7 +11,25 @@ export class ProjectsComponent implements OnInit {
     constructor() {
 
     }
-    
+
+    contacts = [
+        {
+            title: "Phone",
+            description: "(718) 594-3470",
+            href: "tel:7185943470"
+        },
+        {
+            title: "Email",
+            description: "mattpritchard4@gmail.com",
+            href: "mailto:mattpritchard4@gmail.com",
+        },
+        {
+            title: "Github",
+            description: "https://github.com/mattpritchard4",
+            href: "https://github.com/mattpritchard4"
+        }
+    ];
+
     projects = [
         {
             title: "Seeker - Design Automation",
@@ -30,7 +49,20 @@ export class ProjectsComponent implements OnInit {
         }
     ];
 
+    languages = [
+        "JavaScript", "TypeScript", "Ruby", "Racket", "HTML/CSS", "PHP", "Bash"
+    ];
+
+    tools = [
+        "Emacs", "git", "SASS", "jQuery", "API Integration", "Pug", "Pollen", "CSS Grid", "Bootstrap"
+    ];
+
+    frameworks = [
+        "Angular 6/7", "Webflow", "WordPress", "Braze", "Agility Harmony", "Oracle Responsys", "Sailthru"
+    ]
+
     ngOnInit() {
+
     }
 
 }
