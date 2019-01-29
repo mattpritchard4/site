@@ -1,7 +1,7 @@
 <h1>Resume</h1>
 <hr/>
 <h2>Contact</h2>
-<div class="contact skills-grid">
+<div [@listStagger]="contacts" class="contact skills-grid">
     <div [ngClass]="'list-column'" *ngFor="let contact of contacts">
         <h3>{{ contact.title }}: </h3>
         <p><a target="_blank" href="{{contact.href}}">{{contact.description}}</a></p>
@@ -9,7 +9,7 @@
 </div>
 <hr/>
 <h2>Technical Skills</h2>
-<div class="skills-grid">
+<div [@listStagger]="languages" class="skills-grid">
     <div [ngClass]="'list-column'">
         <h3>Languages</h3>
         <ul *ngFor="let lang of languages">
@@ -30,8 +30,24 @@
     </div>
 </div>
 <hr/>
+<h2>Professional Experience</h2>
+<div [@listStagger]="responsibilities">
+    <h3>D3 NYC: Senior Front End Developer (September 2016 - Present)</h3>
+    <p>Initially hired as an HTML email coder, my responsibilities and capabilities quickly ballooned into a full front end development position. Not only am I responsible for most of the internal company IT needs, I have built sites for all of our major clients, managed and coded thousands of marketing email campaings in half a dozen Email Service Providers, automated both development and design work, and successfully hired and managed a full team of developers for over a year. In addition to my technical work, I meet directly with our clients alongside our Accounts/Client Services teams and assist in solving their unique challenges.</p>
+    <div [ngClass]="'list-column'">
+        <h3>
+            Responsibilites
+        </h3>
+        <ul *ngFor="let resp of responsibilities">
+            <li>{{resp.title}}</li>
+        </ul>
+    </div>
+</div>
+<hr/>
 <h2>Projects</h2>
-<div *ngFor="let proj of projects">
-    <h3>{{ proj.title }}</h3>
-    <p>{{proj.description}}</p>
+<div [@listStagger]="projects">
+    <div *ngFor="let proj of projects">
+        <h3>{{ proj.title }}</h3>
+        <p>{{proj.description}}</p>
+    </div>
 </div>

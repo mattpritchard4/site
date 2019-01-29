@@ -1,9 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { Section } from './section';
+import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
+
 @Component({
     selector: 'app-projects',
     templateUrl: './projects.component.html',
-    styleUrls: ['./projects.component.scss']
+    styleUrls: ['./projects.component.scss'],
+    animations: [
+        trigger('listStagger', [
+            transition('* <=> *', [
+                query(':enter', [
+                    style({ opacity: 0, transform: 'translateY(-20px)' }),
+                    stagger('50ms',
+                        animate('550ms ease-out',
+                            style({ opacity: 1, transform: 'translateY(0px)' })))
+                ], { optional: true }),
+                query(':leave', animate('50ms', style({ opacity: 0 })),
+                    { optional: true })
+            ])
+        ])
+    ]
 })
 export class ProjectsComponent implements OnInit {
     title: string;
@@ -40,6 +55,33 @@ export class ProjectsComponent implements OnInit {
 
     frameworks = [
         "Angular 6/7", "Webflow", "WordPress", "Braze", "Agility Harmony", "Oracle Responsys", "Sailthru"
+    ];
+
+    responsibilities = [
+        {
+            title: "Front end web development for multiple marketing clients"
+        },
+        {
+            title: "Maintenance of React/GatsbyJS based agency website"
+        },
+        {
+            title: "Automation of internal agency projects"
+        },
+        {
+            title: "Implementing programmatic logic into advanced marketing emails in multiple ESPs"
+        },
+        {
+            title: "Production and QA of HTML marketing email for multiple clients"
+        },
+        {
+            title: "Reporting and analytics on marketing campaign performance"
+        },
+        {
+            title: "Audience segmentation/targeting/retargeting for intelligent digital marketing campaigns"
+        },
+        {
+            title: "Hiring, training, and management of new developers"
+        }
     ];
 
     projects = [

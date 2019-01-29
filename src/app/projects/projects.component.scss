@@ -28,6 +28,13 @@
 @media screen and (max-width: 768px) {
     .list-column {
         display: grid;
+        grid-column: span 4 !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .list-column {
+        display: grid;
         grid-column: span 8 !important;
     }
 }
